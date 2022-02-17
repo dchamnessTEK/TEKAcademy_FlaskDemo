@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h4>Add a new student's performance status with the form below:</h4>
+  <form method="POST">
+      {# This hidden_tag is a CSRF security feature. #}
+      {{ form.hidden_tag() }}
+      {{ form.stu_id.label }} {{ form.stu_id() }}
+      {{ form.status_description.label }} {{ form.status_description() }}
+      {{ form.submit() }}
+  </form>
+</div>
+{% endblock %}

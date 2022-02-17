@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>Here is a list of all available students</h1>
+  <ul>
+    {% for stu in students  %}
+    <p>===================================================</p>
+    <li>Student ID : {{stu.id}}</li>
+    <li>Student name: {{stu.name}}</li>
+    <li> Homework's grade:
+      <ul>
+        {% for homework in stu.homeworks  %}
+        <li>
+            {{homework}}
+        </li>
+        {% endfor %}
+      </ul>
+    </li>
+    <li>Performance status: {{stu.performance_report}}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
