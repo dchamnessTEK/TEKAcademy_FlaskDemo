@@ -1,5 +1,10 @@
-# TEKAcademy
-To start the app:  run "flask run" in terminal
+# TEKAcademy Flask Demo App
+To start the app:  
+* Set environment variables
+** FLASKAPP
+** FLASKENV
+
+run "flask run" in terminal
 
 Dependencies: \
 “pip install flask” \
